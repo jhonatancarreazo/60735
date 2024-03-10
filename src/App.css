@@ -1,0 +1,31 @@
+/* paleta de colores */
+
+:root {
+    --color-primary: #395886;
+    /* Azul principal */
+    --color-dark: #638ecb;
+    /* Azul oscuro */
+    --color-light: #8aaee0;
+    /* Azul claro */
+    --color-accent: #b1c9ef;
+    /* Azul de acento */
+    --color-background: #d5deef;
+    /* Fondo azul claro */
+    --color-white: #f0f3fa;
+}
+
+nav {
+    background-color: var(--color-primary);
+}
+
+.logo {
+    color: var(--color-white);
+}
+
+.cartIcon {
+    color: var(--color-white);
+}
+
+.title {
+    color: var(--color-primary);
+}
