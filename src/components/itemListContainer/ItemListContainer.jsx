@@ -1,12 +1,16 @@
-import { Heading } from '@chakra-ui/react'
 import React from 'react'
+import useProductData from '../../hooks/useProductData'
+import WithLoading from '../hoc/WithLoading';
+import ItemList from '../itemList/ItemList';
 
+const ItemListContainer = () => {
+    const { data } = useProductData();
 
-const ItemListContainer = ({title}) => {
-
+    console.log(data)
+    const ItemWithLoading = WithLoading(ItemList)
   return (
     <div>
-      <Heading>{title}</Heading>
+        <ItemWithLoading isLoading={data.length === 0} data={data} />
     </div>
   )
 }

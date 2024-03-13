@@ -1,0 +1,13 @@
+.counterContainer {
+
+    width: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.counterContainer button {
+    height: 2rem;
+    width: 2rem;
+    background-color: aqua;
+}

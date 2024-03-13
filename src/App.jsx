@@ -1,13 +1,25 @@
 import { ChakraProvider } from '@chakra-ui/react'
-import NavBar from './components/navBar/NavBar'
-import ItemListContainer from './components/itemListContainer/ItemListContainer'
+import CountryInfo from './components/microdesafio/CountryInfo'
+import Acronimo from './components/microdesafio/Acronimo'
+import Pokemon from './components/microdesafio/Pokemon'
+import ItemCount from './components/itemCount/ItemCount'
+import ItemListContainer from './components/ItemListContainer/ItemListContainer'
+import WithLogging from './components/hoc/WithLogging'
 
 function App() {
 
+    const WrappedComponente = CountryInfo 
+    const ComponentWithLogging = WithLogging(WrappedComponente)
+
   return (
     <ChakraProvider>
-      <NavBar />
-      <ItemListContainer title='Tienda' />
+      {/* <CountryInfo />
+      <Acronimo />
+      <Pokemon /> */}
+      <ItemCount stock={10} initialValue={1} />
+      <ItemListContainer />
+
+      <ComponentWithLogging />
     </ChakraProvider>
   )
 }
