@@ -1,25 +1,27 @@
 import { ChakraProvider } from '@chakra-ui/react'
-import CountryInfo from './components/microdesafio/CountryInfo'
-import Acronimo from './components/microdesafio/Acronimo'
-import Pokemon from './components/microdesafio/Pokemon'
 import ItemCount from './components/itemCount/ItemCount'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
-import WithLogging from './components/hoc/WithLogging'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import NavBar from './components/navbar/NavBar'
+import ItemDetailContainer from './components/itemDetailContainer/ItemDetailContainer'
+import PageNotFound from './components/pageNotFound/PageNotFound'
 
 function App() {
 
-    const WrappedComponente = CountryInfo 
-    const ComponentWithLogging = WithLogging(WrappedComponente)
+
 
   return (
     <ChakraProvider>
-      {/* <CountryInfo />
-      <Acronimo />
-      <Pokemon /> */}
-      <ItemCount stock={10} initialValue={1} />
-      <ItemListContainer />
-
-      <ComponentWithLogging />
+      <BrowserRouter>
+        <NavBar/>
+        <Routes>
+          <Route path='/' element={<ItemListContainer title='Tienda' />} />
+          <Route path='/category/:categoryId' element={<ItemListContainer title='Tienda' />} />
+          <Route path='/product/:productId' element={<ItemDetailContainer />} />
+          <Route path='/cart' element={<h1>Carrito</h1>} />
+          <Route path='*' element={<PageNotFound />} />
+        </Routes>
+      </BrowserRouter>
     </ChakraProvider>
   )
 }
