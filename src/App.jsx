@@ -1,6 +1,7 @@
 import { ChakraProvider } from '@chakra-ui/react'
 import ItemCount from './components/itemCount/ItemCount'
-import ItemListContainer from './components/ItemListContainer/ItemListContainer'
+//import ItemListContainer from './components/ItemListContainer/ItemListContainer'
+import ItemListContainer from "./components/itemDetailContainer/ItemDetailContainer"
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import NavBar from './components/navbar/NavBar'
 import ItemDetailContainer from './components/itemDetailContainer/ItemDetailContainer'

@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import useProductData from '../../hooks/useProductData'
+import React, { useEffect, useState } from 'react';
+//import useProductData from '../../hooks/useProductData';
 import ItemList from '../itemList/ItemList';
 import { getProducts, getProductsByCategory } from '../../data/asyncMock';
 import { useParams } from 'react-router-dom';
@@ -31,6 +31,7 @@ const ItemListContainer = ({ title }) => {
         /> : 
         <>
           <h1>{title}</h1>
+          <h2>Hola</h2>
           <ItemList data={data} />
         </>
       }

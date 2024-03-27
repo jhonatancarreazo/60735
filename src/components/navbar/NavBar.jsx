@@ -18,19 +18,15 @@ import CartWidget from '../cartWidget/CartWidget';
 import './NavBar.css'
 const NavBar = () => {
   return (
-    <Box className='nav' p={2}>
-        <Heading ml={3}><Link to='/'>Tienda</Link></Heading>
+    <Box className='nav' p={1} boxShadow='xs' bg='white' mb='50px'>
+        <Heading ml={3}><Link to='/'>Ethnos Shoes</Link></Heading>
         <Menu>
-            <MenuButton as={Button} rightIcon={<FaChevronDown />
-    }>
-                Categorías
-            </MenuButton>
-            <MenuList>
-                <MenuItem><Link to={'/category/Remeras'}>Remeras</Link> </MenuItem>
-                <MenuItem><Link to={'/category/Buzos'}>Buzos</Link></MenuItem>
-                <MenuItem><Link to={'/category/Pijamas'}>Pijamas</Link></MenuItem>
-                <MenuItem><Link to={'/category/Zapatillas'}>Zapatillas</Link></MenuItem>
-            </MenuList>
+           
+            <Link to={'/category/Remeras'} >New Arrivals</Link>
+            <Link to={'/category/Buzos'}>Shoes</Link>
+            <Link to={'/category/Pijamas'}>Sandals</Link>
+            <Link to={'/category/Zapatillas'}>Accesories</Link>
+            <Link to={'/category/Remeras'}>Sale</Link>
             </Menu>
             <CartWidget/>
     </Box>

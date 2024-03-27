@@ -2,5 +2,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(47, 47, 199);
+    font-family:  sans-serif;
+    
 }
+ .nav > a{
+    font-weight: bold;
+ }

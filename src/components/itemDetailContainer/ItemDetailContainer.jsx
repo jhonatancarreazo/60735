@@ -24,11 +24,11 @@ const ItemDetailContainer = () => {
     <div>
               {
         loading ? 
-        <Spinner
-          thickness='4px'
+        <Spinner  w='50px' h='50px' display="flex" alignItems="center" justifyContent="space-between"
+          thickness='10px'
           speed='0.65s'
           emptyColor='gray.200'
-          color='blue.500'
+          color='PaleVioletRed'
           size='xl'
         /> : 
         <>
